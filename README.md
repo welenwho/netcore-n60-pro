@@ -10,12 +10,15 @@ A template for building OpenWrt with GitHub Actions
 
 ## Usage
 
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository.
-- Select `Build OpenWrt` on the Actions page.
-- Click the `Run workflow` button.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
+- 点击 [Fork] 按钮生成新项目.
+- [LEDE源码](https://github.com/coolsnowwolf/lede)，自定义脚本diy-part2.sh，配置文件LEDE.config.
+- [dailook源码](https://github.com/dailook/immortalwrt-mt798x)，自定义脚本diy-part3.sh，配置文件dailook-hanwckf.config.
+- [Immortalwrt源码](https://github.com/immortalwrt/immortalwrt)，自定义脚本diy-part4.sh，配置文件immortalwrt.config.
+- [237源码](https://github.com/padavanonly/immortalwrt-mt798x-24.10)，自定义脚本diy-part5.sh，配置文件padavanonly-immortalwrt-mt798x-24.10.config.
+- [zhiern源码](https://github.com/zhiern/immortalwrt-mt798x)，自定义脚本diy-part6.sh，配置文件zhiern-hanwckf.config.
+- diy-part1.sh是共用脚本，加入了ADGuardHome源码，所有默认配置文件只集成了定时重启、终端ttyd、组播代理omcproxy、组播转换msd_lite和ADGuardHome的luci，需要自定义的请自行修改对应的自定义脚本和配置文件.
+- ADGuardHome正常使用需要在luci里面手动下载[Linux_arm64核心文件](https://github.com/AdguardTeam/AdGuardHome/releases/),或者PC下载后解压将AdGuardHome上传至/usr/bin/AdGuardHome/，设置权限0755.
+- 在Actions页面运行对应的源码固件编译文件，点击右侧的 Run workflow 按钮开始编译，正常的话大概1h左右能看到编译结果，编译完成后下载相应的固件即可.
 
 ## Tips
 

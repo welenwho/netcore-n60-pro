@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part2.sh
-# Description: OpenWrt DIY script part 2 (After Update feeds)
+# File name: diy-part6.sh
+# Description: OpenWrt DIY script part 6 (After Update feeds)
 #
 # Copyright (c) 2019-2024 P3TERX <https://p3terx.com>
 #
@@ -19,18 +19,10 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
-# Remove the default apps
-sed -i 's/ddns-scripts_aliyun //g' include/target.mk
-sed -i 's/ddns-scripts_dnspod //g' include/target.mk
-sed -i 's/luci-app-ddns //g' include/target.mk
-sed -i 's/luci-app-arpbind //g' include/target.mk
-sed -i 's/luci-app-filetransfer //g' include/target.mk
-sed -i 's/luci-app-vsftpd //g' include/target.mk
-sed -i 's/luci-app-ssr-plus //g' include/target.mk
-sed -i 's/luci-app-vlmcsd //g' include/target.mk
-sed -i 's/luci-app-accesscontrol //g' include/target.mk
-sed -i 's/luci-app-nlbwmon //g' include/target.mk
-sed -i 's/luci-app-wol //g' include/target.mk
+# Remove print
+sed -i '/printer/d' target/linux/mediatek/image/mt7986.mk
+sed -i 's/kmod-usb-net-rndis //g' target/linux/mediatek/image/mt7986.mk
+sed -i '/luci-app-filetransfer/d' include/target.mk
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
