@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: padavanonly-immortalwrt-2410-builder
+name: padavanonly-immortalwrt-mt798x-2410-builder
 
 on:
   repository_dispatch:
