@@ -20,3 +20,6 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 # Add ADGuardHome source
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
+# add gecoosac
+git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
+chmod -R 755 ./package/openwrt-gecoosac/*
