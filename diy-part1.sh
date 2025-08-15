@@ -23,6 +23,6 @@ chmod -R 755 ./package/luci-app-adguardhome/*
 # add gecoosac
 git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
 chmod -R 755 ./package/openwrt-gecoosac/*
-# add push
-git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
-chmod -R 755 ./package/luci-app-pushbot/*
+# add tailscale
+git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
+chmod -R 755 ./package/luci-app-tailscale/*
